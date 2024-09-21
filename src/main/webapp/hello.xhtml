@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:c="jakarta.tags.core"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+<h:body>
+    <h2>Hello World JSF sample v2</h2>
+    <h:form>
+        <h:outputLabel value="Name: ">
+            <h:inputText id="name" value="#{helloBean.name}"/>
+        </h:outputLabel>
+        <h:commandButton value="Submit" action="#{helloBean.submit()}">
+            <f:ajax execute="@form" render="hello"/>
+        </h:commandButton>
+    </h:form>
+    <br/>
+    <c:if test="#{helloBean.validated}">
+        <h:outputText id="hello" value="#{helloBean.hello}"/>
+    </c:if>
+</h:body>
+</html>

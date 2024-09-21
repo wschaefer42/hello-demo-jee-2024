@@ -1,4 +1,4 @@
-package org.example.hellodemo;
+package org.example.hellodemo.jsp;
 
 import jakarta.inject.Inject;
 import jakarta.servlet.ServletException;
